@@ -1,0 +1,30 @@
+package com.example.landmarkbookapp;
+
+import android.graphics.Bitmap;
+
+public class Singleton {
+
+    private static Bitmap chosenImage;
+    private static Singleton singleton;
+
+    public Singleton(){
+
+
+    }
+
+    public Bitmap getChosenImage() {
+        return chosenImage;
+    }
+
+    public void setChosenImage(Bitmap chosenImage) {
+        this.chosenImage = chosenImage;
+    }
+
+    public static Singleton getInstance(){
+        if(singleton == null){
+            singleton = new Singleton();
+        }
+
+        return singleton;
+    }
+}
